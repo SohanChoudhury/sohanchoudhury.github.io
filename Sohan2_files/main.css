@@ -23,7 +23,7 @@ body {
 
 }
 
-
+h1,
 h2,
 h3,
 h4,
@@ -34,10 +34,6 @@ p {
 
 }
 
-h1 {
-  font-size: 55pt;
-  margin: 0
-}
 
 .title {
     font-family: 'Poppins';
