@@ -31,6 +31,12 @@
     animation-fill-mode: forwards;
 }
 
+.animated.tealboi {
+    animation-name: tealboi;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+}
+
 .animated.infinite {
   animation-iteration-count: infinite;
 }
@@ -77,6 +83,18 @@
     }
     to {
         -webkit-clip-path: polygon(0 100%, 100% 55%, 100% 0, 0 0);
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+        /* For browsers that do not support gradients */
+    }
+}
+
+@keyframes tealboi {
+    from {
+        -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+    }
+    to {
+        -webkit-clip-path: polygon(0 100%, 100% 32%, 100% 0, 0 0);
         clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
         /* For browsers that do not support gradients */
     }
