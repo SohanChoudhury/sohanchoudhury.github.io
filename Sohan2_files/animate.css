@@ -25,6 +25,12 @@
     animation-fill-mode: forwards;
 }
 
+.animated.longmore {
+    animation-name: lengthenmore;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
 .animated.infinite {
   animation-iteration-count: infinite;
 }
@@ -58,7 +64,19 @@
         clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
     }
     to {
-        -webkit-clip-path: polygon(0 100%, 100% 18%, 100% 0, 0 0);
+        -webkit-clip-path: polygon(0 100%, 100% 22%, 100% 0, 0 0);
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+        /* For browsers that do not support gradients */
+    }
+}
+
+@keyframes lengthenmore {
+    from {
+        -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+    }
+    to {
+        -webkit-clip-path: polygon(0 100%, 100% 55%, 100% 0, 0 0);
         clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
         /* For browsers that do not support gradients */
     }
