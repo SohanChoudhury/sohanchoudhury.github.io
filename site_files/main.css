@@ -2392,15 +2392,15 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 30px;
+  padding-top: 1px;
   overflow: hidden;
-  padding-bottom: 30px;
+  padding-bottom: 1px;
 }
 
 @media (min-width: 768px) {
   .c-image-block__wrap {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 1px;
+    padding-bottom: 1px;
   }
 }
 
@@ -2482,7 +2482,7 @@ a {
 
 .c-image-block .c-image-block__item img {
   max-width: 100%;
-  width: 100%;
+  width: 40%;
   -webkit-transition: opacity 0.6s linear;
   -o-transition: opacity 0.6s linear;
   transition: opacity 0.6s linear;
@@ -2865,4 +2865,3 @@ br.u-break {
 .u-margin-bottom-50 {
   margin-bottom: 50px;
 }
-
