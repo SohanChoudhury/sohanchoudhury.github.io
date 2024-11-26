@@ -1,265 +1,257 @@
 <!DOCTYPE html>
-<html lang="en-US" prefix="og: http://ogp.me/ns#"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<base href=".">
+<html>
+<head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145856262-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    :root {
+      --bg: #fff;
+      --text: #3A3835;
+      --secondary: #9A958F;
+      --button-bg: #F5F4F2;
+      --spacing: 1.5rem;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      background: white;
+    }
 
-  gtag('config', 'UA-145856262-1');
-</script>
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      z-index: -1;
+      background-image: url("data:image/svg+xml,%3Csvg width='100%' height='100%' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 50 Q 25 30 40 50 T 70 50 T 100 50' stroke='rgba(0,0,0,0.05)' stroke-width='0.7' fill='none' /%3E%3Cpath d='M0 25 Q 25 45 50 25 T 100 25' stroke='rgba(0,0,0,0.05)' stroke-width='0.7' fill='none' /%3E%3Cpath d='M0 75 Q 25 55 50 75 T 100 75' stroke='rgba(0,0,0,0.05)' stroke-width='0.7' fill='none' /%3E%3Cpath d='M0 85 Q 35 65 50 85 T 100 85' stroke='rgba(0,0,0,0.05)' stroke-width='0.7' fill='none' /%3E%3Cpath d='M0 15 Q 15 35 50 15 T 100 15' stroke='rgba(0,0,0,0.05)' stroke-width='0.7' fill='none' /%3E%3C/svg%3E");
+      background-size: 50% auto;
+      pointer-events: none;
+    }
+    
+    .content {
+      max-width: 650px;
+      padding: 3rem;
+      background: white;
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.05);
+      border-radius: 8px;
+      margin: 2rem;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      line-height: 1;
+      margin-bottom: var(--spacing);
+      color: black;
+      font-weight: 700;
+    }
 
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Sohan — Welcome</title>
+    .description {
+      margin-bottom: var(--spacing);
+    }
+    
+    .description p {
+      margin-bottom: 1.5rem;
+    }
 
-<script type="text/javascript" src="./site_files/jquery.min.js"></script>
-<script type="text/javascript" src="./site_files/typed.min.js"></script>
+    .description p:last-child {
+      margin-bottom: 0;
+    }
 
-<meta name="keywords" content="Sohan, Choudhury, Sohan Choudhury, sohanyo, sohanchoudhury.com, sohanchoudhury, Georgia Tech, GaTech, Georgia Institute of Technology, Computer Science, Everbridge, Amazon">
-<meta name="description" content="CS undergrad">
-<link rel="canonical" href="index.html">
-<meta property="og:locale" content="en_US">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Sohan — Welcome">
-<meta property="og:description" content="Sohan's personal website.">
-<meta property="og:url" content="index.html">
-<meta property="og:site_name" content="Sohan">
+    .description p:nth-child(1) {
+      color: var(--text);
+    }
 
-<link rel="stylesheet" type="text/css" href="./site_files/styles.css">
-<link rel="stylesheet" href="./site_files/style.css">
-<link rel="stylesheet" href="./site_files/main.css">
-<script src="./site_files/jquery-1.12.4.min.js"></script>
+    .description p:nth-child(2),
+    .description p:nth-child(3) {
+      color: var(--secondary);
+    }
 
-<script type="text/javascript">
-var wpcf7 = {"apiSettings":{"root":"http:\/\/www.sohanchoudhury.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}}};
-</script>
+    .description a {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+    }
 
-<script>(window.jQuery && jQuery.noConflict()) || document.write('<script src="/wp-includes/js/jquery/jquery.js"><\/script>')</script>
-<script src="./site_files/scripts.js"></script>
-<script src="./site_files/scripts(1).js"></script>
+    .description a:hover {
+      color: black;
+    }
 
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    
+    .link-button {
+      color: var(--text);
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: all 0.2s;
+      background: var(--button-bg);
+      font-size: 0.9rem;
+      white-space: nowrap;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      line-height: inherit;
+    }
+    
+    .link-button:hover {
+      background: var(--text);
+      color: white;
+      transform: translateY(-2px);
+    }
 
-<meta name="generator" content="WPML ver:3.8.4 stt:1,27;">
-  <script>
-    window.lang = "en"
-  </script>
-  <link rel="apple-touch-icon" sizes="180x180" href="./try5.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./try5.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./try5.png">
-  <link rel="mask-icon" href="./try5.png" color="#000000">
-  <meta name="apple-mobile-web-app-title" content="Sohan Choudhury">
-  <meta name="application-name" content="SC">
-  <meta name="theme-color" content="#ffffff">
+    .chat-container {
+      position: relative;
+      white-space: nowrap;
+    }
 
+    .chat-text {
+      display: inline-block;
+      padding: 8px 16px;
+      background: var(--button-bg);
+      border-radius: 6px;
+      color: var(--text);
+      font-size: 0.9rem;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .chat-sike {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: var(--text);
+      font-size: 0.9rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .chat-container:hover .chat-text {
+      opacity: 0;
+    }
+
+    .chat-container:hover .chat-sike {
+      opacity: 1;
+    }
+
+    .chat-container:hover {
+      cursor: none;
+    }
+    
+    .footer {
+      margin-top: 4rem;
+      color: var(--secondary);
+      font-size: 0.9rem;
+    }
+
+    .copied-toast {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--text);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      pointer-events: none;
+    }
+
+    .copied-toast.show {
+      opacity: 1;
+    }
+
+    .hidden-input {
+      position: absolute;
+      left: -9999px;
+      top: -9999px;
+    }
+
+    @media (max-width: 600px) {
+      .link-button, .chat-container {
+        flex: 0 1 auto;
+      }
+      
+      .links {
+        gap: 0.75rem;
+      }
+    }
+  </style>
 </head>
+<body>
+  <div class="content">
+    <h1>Sohan Choudhury</h1>
 
-  <body class="home page">
-    <div id="barba-wrapper">
-                  <div class="wrapper">
-            <header class="c-header">
-  <div class="c-header__wrap c-container">
-    <a class="c-header__item c-brand-logo" href="./index.html">  <!-- update this link -->
-    </a>
-    <nav class="c-header__item">
-              <ul id="menu-primary-menu" class="c-nav">
+    <div class="description">
+      <p>Co-founded <a href="https://www.flintk12.com/" target="_blank" rel="noopener noreferrer">Flint</a> with <a href="https://www.linkedin.com/in/jinseo-park/" target="_blank" rel="noopener noreferrer">Jinseo</a>. We're having a blast building AI to personalize learning for K-12. We were in <a href="https://www.ycombinator.com/companies/flint-2" target="_blank" rel="noopener noreferrer">YC S23</a>, and are not currently fundraising.</p>
+      
+      <p>Previously co-founded Gatherly, a video chat platform. Worked on it for three years, and the business was later acquired.</p>
+      
+      <p>Dropped out of Georgia Tech, where I studied computer science and grew a fond hatred for bureaucracy via internships at large tech companies like Amazon.</p>
+    </div>
 
-<!-- <li class="menu-item menu-resume"><a target="_blank" href="./site_files/Sohan_Choudhury_Resume.pdf">Resume</a></li> -->
-<li class="menu-item menu-blog"><a target="_blank" href="https://medium.com/@sohanchoudhury">Blog</a></li>
-<li class="js-toggle-contact menu-item menu-get-in-touch"><a>Contact</a></li>
-</ul>
-          </nav>
-  </div>
-</header>
-
-<section class="o-block c-hero  ">
-    <div class="o-block__wrap c-hero__wrap c-container">
-      <div class="o-block__item c-hero__item">
-        <h1 class="js-animation-item ">Welcome</h1>
-        <div class="c-hero__content c-shifted">
-
-                    <script type="text/javascript">
-                      $(function(){
-                            $(".write").typed({
-
-                                strings: ["Hey there! ^200 I'm <strong>Sohan Choudhury</strong>. ^200<br>^200"],
-                                startDelay: 500,
-                                typeSpeed: -25,
-                                cursorChar: '|',
-                                callback: function() {
-                                  write2();
-                                }
-                            });
-                        });
-
-                      function write2() {
-                        $('.typed-cursor').hide();
-                        $(".write2").typed({
-                          strings: ["^100Avid <strong><a href='https://medium.com/@sohanchoudhury'>writer</a></strong>, aspiring <strong><a href='https://news.gatech.edu/2020/03/11/how-longs-line-queues-app-wins-2020-inventure-prize'>entrepreneur</a></strong>, pretend CS student at <strong><a href='http://www.gatech.edu'>Georgia Tech</a></strong>. ^400"],
-                          typeSpeed: -25,
-                          cursorChar: '|',
-                          callback: function() {
-                            lastBoi();
-                          }
-                        });
-
-                      }
-
-                      function lastBoi() {
-                        $('.typed-cursor').hide();
-                          cursorChar: '<em>|</em>'
-                        };
-
-                    </script>
-
-          <div class="c-hero__content">
-            <p><span class="write"></span></p>
-            <p><span class="write2"></span></p>
-            <p><span class="write3"></span></p>
-            <p><span class="write4"></span>
-            <span class="typeEffect2"></span></p>
-          </div>
-                    <a class="c-cta c-cta--primary js-primary-cta u-margin-top-32 js-animation-item">Learn more</a>
-        </div>
+    <div class="links">
+      <a href="https://x.com/hungrysohan" class="link-button" target="_blank" rel="noopener noreferrer">X</a>
+      <button type="button" class="link-button" id="copyButton">Email</button>
+      <a href="https://www.linkedin.com/in/sohan-choudhury/" class="link-button" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <div class="chat-container">
+        <span class="chat-text">15 minute chat</span>
+        <span class="chat-sike">sike</span>
       </div>
     </div>
-</section>
 
-
-<section class="o-block c-block js-animation-wrapper">
-  <div class="o-block__wrap c-block__wrap c-container">
-          <div class="o-block__item c-block__item">
-            <h2 class="js-animation-item ">About me</h2>
-            <div class="c-block__content c-shifted u-margin-top-50">
-                            <p class="js-animation-item u-margin-bottom-50">I'm currently working full-time on building <strong><a href='https://gatherly.io/'>Gatherly</a></strong>.</p>
-                            <p class="js-animation-item u-margin-bottom-50">I spent last summer at Amazon in Seattle. I enjoy building cool products.</p>
-                            <p class="js-animation-item u-margin-bottom-50">My current passion project is <strong><a href='https://medium.com/myboost'>BOOST</a></strong>, a Medium publication exploring technology, novel ideas, and the past.</p>
-
-            </div>
-          </div>
-  </div>
-
-</section>
-
-<!-- <section class="o-block c-image-block js-animation-wrapper" style="opacity: 1;">
-    <div class="o-block__wrap c-image-block__wrap has-item-shadow-default c-container--fluid   has-no-height">
-                      <div class="o-block__item c-image-block__item js-animation-item-image js-preload-image has-no-overflow" style="opacity: 1;">
-          <img class="image-small" src="./site_files/me.jpeg" alt="" style="display: none;">
-  <img src="./site_files/me.jpeg" class="is-loaded is-static"></div></div></section> -->
-
-
-
-<section class="o-block c-block js-animation-wrapper" style="opacity: 1;">
-  <div class="o-block__wrap c-block__wrap">
-    <div class="o-block__item c-block__item">
-      <div class="c-container">
-        <h2 class="u-margin-bottom-32 js-animation-item" style="opacity: 1;">Links</h2>
-      </div>
-      <ul class="c-block-list c-container--fluid">
-      <li class="c-block-list__item js-animation-item " style="opacity: 1;">
-          <a target="_blank" href="https://medium.com/@sohanchoudhury">
-            <div class="c-block-list__content">
-              <h3 class="c-block-list__single">Medium</h3>
-              <p class="c-block-list__single">Articles about technology.</p>
-              <div class="c-block-list__single">
-                                  <span class="c-cta c-cta--primary is-reverse c-cta--small">View</span>
-                              </div>
-            </div>
-          </a>
-        </li>
-
-        <li class="c-block-list__item js-animation-item " style="opacity: 1;">
-            <a target="_blank" href="https://www.linkedin.com/in/sohan-choudhury">
-              <div class="c-block-list__content">
-                <h3 class="c-block-list__single">LinkedIn</h3>
-                <p class="c-block-list__single">Best way to stay in touch with me.</p>
-                <div class="c-block-list__single">
-                                    <span class="c-cta c-cta--primary is-reverse c-cta--small">View</span>
-                                </div>
-              </div>
-            </a>
-          </li>
-
-          <li class="c-block-list__item js-animation-item " style="opacity: 1;">
-              <a target="_blank" href="https://github.com/SohanChoudhury">
-                <div class="c-block-list__content">
-                  <h3 class="c-block-list__single">GitHub</h3>
-                  <p class="c-block-list__single">Personal and class projects.</p>
-                  <div class="c-block-list__single">
-                                      <span class="c-cta c-cta--primary is-reverse c-cta--small">View</span>
-                                  </div>
-                </div>
-              </a>
-          </li>
-
-            </div>
-          </a>
-        </li>
-              </ul>
+    <div class="footer">
+      Last Updated: November 2024
     </div>
   </div>
-</section>
 
+  <div class="copied-toast" id="toast">Copied</div>
+  
+  <!-- Hidden input for copy fallback -->
+  <input type="text" value="sohan@flintk12.com" class="hidden-input" id="hiddenInput" readonly>
 
-
-<footer class="o-block c-footer">
-  <div class="o-block__wrap c-footer__wrap c-container">
-    <div class="o-block__item c-footer__item">
-      <p>© 2020 Sohan Choudhury – Fairfield, CT – Atlanta, GA
-            </p>
-    </div>
-    <div class="o-block__item c-footer__item">
-<!--       <a target="_blank" href="./site_files/Sohan_Choudhury_Resume.pdf"class="c-cta c-cta--primary c-cta--extrasmall is-reverse">Resume</a>
-      <a target="_blank" href="./site_files/Sohan_Choudhury_Resume.pdf" target="blank" class="c-cta c-cta--primary c-cta--extrasmall is-reverse"></a> -->
-      <a class="js-toggle-contact c-cta c-cta--primary c-cta--extrasmall is-reverse">Contact</a>
-      <a href="" target="blank" class="c-cta c-cta--primary c-cta--extrasmall is-reverse"></a>
-    </div>
-  </div>
-</footer>
-
-          </div>
-
-        <script src="./site_files/main.js"></script>
-        <section class="o-block c-contact js-contact" style="display: none; opacity: 0;">
-  <span class="closer js-closer"></span>
-  <div class="o-block__wrap c-contact__wrap c-container">
-    <div class="o-block__item c-contact__item">
-      <div class="cross-closer js-closer">
-        <div class="cross-closer__wrap"></div>
-      </div>
-
-      <div role="form" class="wpcf7" id="wpcf7-f21-o1" lang="it-IT" dir="ltr">
-<div class="screen-reader-response"></div>
-<form action="./educationEmail.php" method="post" class="wpcf7-form" novalidate="novalidate" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 40);">
-<div style="display: none;">
-<input type="hidden" name="_wpcf7" value="21" autocomplete="off">
-<input type="hidden" name="_wpcf7_version" value="4.9.2" autocomplete="off">
-<input type="hidden" name="_wpcf7_locale" value="it_IT" autocomplete="off">
-<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f21-o1" autocomplete="off">
-<input type="hidden" name="_wpcf7_container_post" value="0" autocomplete="off">
-</div>
-
-<ul>
-
-<li data-step="1" class="js-is-selected">
-
-    <label><big><a href="https://twitter.com/SohanChoudhury8">@SohanChoudhury8</a></big></label>
-    <br>
-    <br>
-    <br>
-    <br>
-    <label><big><a href="mailto:sohanyo@gmail.com">sohanyo@gmail.com</a></big></label>
-
-</li>
-
-</ul>
-
-    </div>
-  </div>
-</section>
-    </div>
-
-</body></html>
+  <script>
+    document.getElementById('copyButton').addEventListener('click', () => {
+      const hiddenInput = document.getElementById('hiddenInput');
+      hiddenInput.select();
+      
+      try {
+        document.execCommand('copy');
+        const toast = document.getElementById('toast');
+        toast.classList.add('show');
+        setTimeout(() => {
+          toast.classList.remove('show');
+        }, 2000);
+      } catch (err) {
+        console.error('Failed to copy text: ', err);
+      }
+      
+      // Deselect the input
+      window.getSelection().removeAllRanges();
+    });
+  </script>
+</body>
+</html>
